@@ -19,6 +19,9 @@ features](https://taskwarrior.org/docs/), developed as a portable open source pr
 with an active and quite vast [ecosystem of tools, hooks and
 extensions](https://taskwarrior.org/tools/).
 
+### HEADS UP! THIS FORK HAS BEEN ESTABLISHED TO MAINTAIN AND DEVELOP THE TASKWARRIOR 2.6.X BRANCH!!
+It may fall behind of taskwarrior3.x (taskchampion) development, but will a place for fixes and cherry-picking from changes made after official 2.6.2 releases. 
+
 ## Install
 [![Arch](https://img.shields.io/archlinux/v/community/x86_64/task)](https://archlinux.org/packages/community/x86_64/task/)
 [![Debian](https://img.shields.io/debian/v/task/testing)](https://packages.debian.org/search?keywords=task&searchon=names&suite=all&section=all)
@@ -81,7 +84,7 @@ There are many binary packages available, but to install from source requires:
 * cmake
 * make
 * C++ compiler, currently gcc 7.1+ or clang 5.0+ for full C++17 support
-* libuuid
+* uuid-dev (was libuuid-dev)
 * GnuTLS (optional, required for sync)
 
 Download the tarball, and expand it:
