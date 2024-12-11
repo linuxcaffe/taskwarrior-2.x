@@ -21,7 +21,7 @@ extensions](https://taskwarrior.org/tools/).
 
 ### HEADS UP! 
 ### This fork is to intended to preserve the taskwarrior 2.6.2 codebase, and to allow for further fixes and improvements!!
-It's great to see that taskwarrior is still an active project and the active developers, working on version 3.x, have a vision that fuses taskchampion and an SQL database. It's cool, and in rust, and everything.. but they are decidedly uninteresting in further work on the 2.x (data as text files)
+It's great to see that taskwarrior is still an active project and the active developers, working on version 3.x, have a vision that fuses taskchampion and an SQL database. It's cool, and in rust, and everything.. but they are decidedly uninterested in further work on the 2.x (data as text files) codebase.
 
 It was the fact that task used a text-file to store data, that first hooked me to the project. I'm almost certainly first taskwarrior user, and technically the original taskwarrior Designer! I worked with the orginal programmer, Paul Beckingham, as he brilliantly implemented so many of my crazy ideas, like colors, urgency, reports, UDAs, attribute modifiers and SO much more! 
 
