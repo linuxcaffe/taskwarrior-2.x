@@ -21,11 +21,11 @@ extensions](https://taskwarrior.org/tools/).
 
 ### HEADS UP! 
 ### This fork is to intended to preserve the taskwarrior 2.6.2 codebase, and to allow for further fixes and improvements!!
-It's great to see that taskwarrior is still an active project and the active developers have a vision that fuses taskchampion and an SQL database. It's cool, and in rust, and everything..
+It's great to see that taskwarrior is still an active project and the active developers, working on version 3.x, have a vision that fuses taskchampion and an SQL database. It's cool, and in rust, and everything.. but they are decidedly uninteresting in further work on the 2.x (data as text files)
 
-.. but it was the fact that task used a text-file to store data, that first hooked me to the project, and I am almost certainly first taskwarrior user, I'm technically the original taskwarrior Designer! I worked with the orginal programmer, Paul Beckingham, as he brilliantly implemented so many of my crazy ideas, like colors, urgency, reports, UDAs, attribute modifiers and SO much more! 
+It was the fact that task used a text-file to store data, that first hooked me to the project. I'm almost certainly first taskwarrior user, and technically the original taskwarrior Designer! I worked with the orginal programmer, Paul Beckingham, as he brilliantly implemented so many of my crazy ideas, like colors, urgency, reports, UDAs, attribute modifiers and SO much more! 
 
-Because I'm set im my ways like that, and kind of squeamish about keeping my task data as a SQL database, this repo is somewhare I can try to apply fixes and cherry-pick from changes made after official 2.6.2 releases, and to curate some of the things that I think belong with it. That said, I'm a terrible programmer, a dubious developer, and would welcome input and contributions.
+Because I'm an old fart, set im my ways like that, and kind of squeamish about keeping my task data as a SQL database, this repo is somewhare I can try to apply fixes and cherry-pick from changes made after official 2.6.2 releases, and to curate some of the things that I think belong with it. That said, I'm a terrible programmer, a dubious developer, and would welcome input, ideas and contributions.
 
 ## Install
 [![Arch](https://img.shields.io/archlinux/v/community/x86_64/task)](https://archlinux.org/packages/community/x86_64/task/)
