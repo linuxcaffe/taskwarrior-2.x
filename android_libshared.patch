@@ -1,0 +1,26 @@
+--- src/libshared/src/FS.cpp.orig
++++ src/libshared/src/FS.cpp
+@@ -353,6 +353,14 @@
+ ////////////////////////////////////////////////////////////////////////////////
+ std::vector <std::string> FS::glob (const std::string& pattern)
+ {
++#ifdef __ANDROID__
++  // Android doesn't have glob
++  std::vector <std::string> result;
++  result.push_back(pattern);
++  return result;
++#else
++
++  // Original code
+   std::vector <std::string> result;
+   glob_t g;
+ #ifdef SOLARIS
+@@ -367,6 +375,8 @@
+ 
+   globfree (&g);
+   return result;
++
++#endif
+ }
+ 
+ ////////////////////////////////////////////////////////////////////////////////

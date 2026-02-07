@@ -1,3 +1,4 @@
+#include "simple_uuid.h"
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Copyright 2006 - 2021, Tomas Babej, Paul Beckingham, Federico Hernandez.
@@ -133,7 +134,7 @@ int confirm4 (const std::string& question)
 // For the implementation details, refer to
 // https://svnweb.freebsd.org/base/head/sys/kern/kern_uuid.c
 #if defined(FREEBSD) || defined(OPENBSD)
-const std::string uuid ()
+std::string uuid ()
 {
   uuid_t id;
   uint32_t status;
@@ -160,7 +161,7 @@ void uuid_unparse_lower (uuid_t uu, char *out)
 }
 #endif
 
-const std::string uuid ()
+std::string uuid ()
 {
   uuid_t id;
   uuid_generate (id);
@@ -199,7 +200,7 @@ const std::string uuid ()
 //  - delimiter is the character used to split up projects into subprojects.
 //    - defaults to the period, '.'
 //
-const std::string indentProject (
+std::string indentProject (
   const std::string& project,
   const std::string& whitespace /* = "  " */,
   char delimiter /* = '.' */)
@@ -317,3 +318,9 @@ bool extractLongInteger (const std::string& input, long& output)
   output = strtol (input.c_str (), nullptr, 10);
   return (format ("{1}", output) == input);
 }
+
+// UUID generation using our simple implementation
+//std::string uuid ()
+//{
+//  return SimpleUUID::generate();
+//}

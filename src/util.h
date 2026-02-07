@@ -33,25 +33,23 @@
 #include <map>
 #include <sys/types.h>
 #if defined(FREEBSD) || defined(OPENBSD)
+#ifdef HAVE_LIBUUID
 #include <uuid.h>
 #else
+#endif
+#else
+#ifdef HAVE_LIBUUID
 #include <uuid/uuid.h>
+#else
+#endif
 #endif
 #include <Table.h>
 
 // util.cpp
 int confirm4 (const std::string&);
-
-#ifndef HAVE_UUID_UNPARSE_LOWER
-void uuid_unparse_lower (uuid_t uu, char *out);
-#endif
-const std::string uuid ();
-
-const std::string indentProject (
-  const std::string&,
-  const std::string& whitespace = "  ",
-  char delimiter = '.');
-
+std::string uuid ();
+std::string indentProject (const std::string&, const std::string&, char);
+std::string uuid ();
 const std::vector <std::string> extractParents (
   const std::string&,
   const char& delimiter = '.');

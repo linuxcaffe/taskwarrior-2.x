@@ -217,8 +217,8 @@ const char* getValue (int argc, const char** argv, std::string arg)
       && s.compare (0, arg.size (), arg) == 0;
   };
   // find last argument before --
-  auto last = std::make_reverse_iterator (argv);
-  auto first = std::make_reverse_iterator (
+  auto last = std::reverse_iterator (argv);
+  auto first = std::reverse_iterator (
     std::find (argv, argv + argc, std::string ("--")));
   auto it = std::find_if (first, last, is_arg);
   if (it == last)

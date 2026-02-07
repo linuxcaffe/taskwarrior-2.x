@@ -1,0 +1,20 @@
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -102,11 +102,12 @@
+ 
+ # Looking for libuuid
+ find_package (UUID)
+-if (NOT UUID_FOUND)
+-  message (FATAL_ERROR "-- libuuid not found.")
+-else ()
+-  set (HAVE_LIBUUID 1)
+-endif ()
++if (ANDROID)
++  message (STATUS "-- Skipping libuuid check for Android")
++  set (HAVE_LIBUUID 0)
++elseif (NOT UUID_FOUND)
++  message (FATAL_ERROR "-- libuuid not found.")
++endif ()
+ 
+ # Looking for gettext
+ find_package (Gettext)
